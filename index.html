@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中科大附近店家搜尋</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>中科大附近店家搜尋</h1>
+        <div class="filters">
+            <!-- 評分篩選 -->
+            <select id="rating">
+                <option value="1">1星</option>
+                <option value="2">2星</option>
+                <option value="3">3星</option>
+                <option value="4">4星</option>
+                <option value="5">5星</option>
+            </select>
+
+            <!-- 固定價格範圍設定 -->
+            <select id="priceRange">
+                <option value="50-100">50~100元</option>
+                <option value="100-200">100~200元</option>
+                <option value="200-300">200~300元</option>
+                <option value="300-400">300~400元</option>
+            </select>
+
+            <!-- 距離篩選 -->
+            <select id="distance">
+                <option value="100">100公尺內</option>
+                <option value="200">100~200公尺</option>
+                <option value="300">200~300公尺</option>
+                <option value="400">300~400公尺</option>
+                <option value="500">400~500公尺</option>
+            </select>
+
+            <!-- 搜尋按鈕 -->
+            <button onclick="searchStores()">尋找店家</button>
+        </div>
+
+        <ul id="store-list" class="store-list">
+            <!-- 店家項目將會在這裡顯示 -->
+        </ul>
+    </div>
+    <!-- 引入 JavaScript 文件 -->
+    <script src="script.js"></script>
+</body>
+</html>
