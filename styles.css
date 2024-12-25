@@ -1,4 +1,3 @@
-/* 定義全局變數，方便統一管理顏色和樣式 */
 :root {
     --primary-color: #3498db; /* 藍色主題色 */
     --primary-color-hover: #2980b9; /* 藍色主題色的懸停效果 */
@@ -8,10 +7,10 @@
     --background-color: #ecf0f1;
     --text-color: #2c3e50;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
-    --box-shadow-hover-color: rgba(0, 0, 0, 0.2);
+    --box-shadow-hover-color: rgb(0, 0, 0);
+    --title-color: #black; /* 新增的標題顏色 */
 }
 
-/* 設置全局樣式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,7 +19,6 @@ body {
     color: var(--text-color);
 }
 
-/* 設置容器樣式 */
 .container {
     width: 80%;
     margin: 20px auto;
@@ -33,14 +31,12 @@ body {
     align-items: center;
 }
 
-/* 設置標題樣式 */
 h1 {
     text-align: center;
-    color: var(--primary-color);
+    color: var(--title-color); /* 使用新的標題顏色 */
     margin-bottom: 20px;
 }
 
-/* 設置篩選器樣式 */
 .filters {
     display: flex;
     justify-content: center;
@@ -59,19 +55,16 @@ h1 {
     margin-right: 10px;
 }
 
-/* 設置篩選器懸停效果 */
 .filters select:hover, .filters button:hover {
     background-color: var(--primary-color-hover);
 }
 
-/* 設置店家列表樣式 */
 .store-list {
     list-style: none;
     padding: 0;
     width: 100%;
 }
 
-/* 設置店家項目樣式 */
 .store-item {
     display: flex;
     align-items: center;
@@ -86,20 +79,17 @@ h1 {
     border: 1px solid var(--border-color); /* 新增的邊框樣式 */
 }
 
-/* 設置店家項目懸停效果 */
 .store-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px var(--box-shadow-hover-color);
 }
 
-/* 設置店家圖片樣式 */
 .store-item img {
     max-width: 120px;
     border-radius: 8px;
     margin-right: 20px;
 }
 
-/* 設置店家連結樣式 */
 .store-item a {
     text-decoration: none;
     color: var(--primary-color);
@@ -107,31 +97,26 @@ h1 {
     transition: color 0.3s ease;
 }
 
-/* 設置店家連結懸停和聚焦效果 */
 .store-item a:hover,
 .store-item a:focus {
     color: var(--primary-color-hover);
     text-decoration: underline;
 }
 
-/* 設置店家照片容器樣式 */
 .store-photo {
     flex-shrink: 0;
 }
 
-/* 設置店家照片樣式 */
 .store-photo img {
     max-width: 200px; /* 調整這裡的數值來放大圖片 */
     border-radius: 8px;
     margin-right: 20px;
 }
 
-/* 設置店家連結容器樣式 */
 .store-link {
     margin-left: auto;
 }
 
-/* 設置地標按鈕樣式 */
 .map-button {
     background: var(--secondary-color);
     border: none;
@@ -141,12 +126,10 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-/* 設置地標按鈕懸停效果 */
 .map-button:hover {
     background-color: var(--secondary-color-hover);
 }
 
-/* 設置地標按鈕圖標樣式 */
 .map-button img {
     width: 24px; /* 調整圖標大小 */
     height: 24px;
