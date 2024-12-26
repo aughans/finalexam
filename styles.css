@@ -8,7 +8,7 @@
     --text-color: #2c3e50;
     --box-shadow-color: rgba(0, 0, 0, 0.1);
     --box-shadow-hover-color: rgba(0, 0, 0, 0.2);
-    --title-color: #black; /* 新增的標題顏色 */
+    --title-color: black; /* 修正顏色定義 */
 }
 
 body {
@@ -53,10 +53,12 @@ h1 {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .filters select:hover, .filters button:hover {
     background-color: var(--primary-color-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .store-list {
@@ -77,6 +79,7 @@ h1 {
     border-radius: 8px;
     margin-bottom: 10px;
     border: 1px solid var(--border-color); /* 新增的邊框樣式 */
+    gap: 20px; /* 新增的間距 */
 }
 
 .store-item:hover {
@@ -85,7 +88,7 @@ h1 {
 }
 
 .store-item img {
-    max-width: 120px;
+    max-width: 120px; /* 或者200px，根據需要調整 */
     border-radius: 8px;
     margin-right: 20px;
 }
@@ -111,6 +114,11 @@ h1 {
     max-width: 200px; /* 調整這裡的數值來放大圖片 */
     border-radius: 8px;
     margin-right: 20px;
+}
+
+.store-photo img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .store-link {
