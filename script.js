@@ -1,9 +1,9 @@
 // 定義店家資料的陣列，每個店家包含名稱、網址、評分、價格範圍、距離和照片
 const stores = [
-    { name: "HUN混", url: "https://maps.app.goo.gl/9TzWFUoW9twxgyhe9", rating: 4.5, price: [200,400], distance: 45, photo: "https://lh5.googleusercontent.com/p/AF1QipNY6s11mygsidwKb1Xv3CkY7qYjDpcc3ZvgZQrd=w426-h240-k-no" },
-    { name: "神攻沙威瑪 台中一中店", url: "https://maps.app.goo.gl/zym5fXAwPtKwsT2r9", rating: 4.0, price: [1, 200], distance: 41, photo: "https://lh5.googleusercontent.com/p/AF1QipOZyYhBoCSJiIXLvfv-zXrsXeBcFRvZlmKB4VYa=w408-h544-k-no" },
-    { name: "OT蛋餅一中大本營", url: "https://maps.app.goo.gl/p5FUWwgWMzHXTfF27", rating: 4.2, price: [1, 200], distance: 45, photo: "https://lh5.googleusercontent.com/p/AF1QipMBeawQ_vTeTQ1UQ0Sq1WS9i0DQjri9CfUZUuPP=w408-h306-k-no" },
-    { name: "九州日式豚骨拉麵(一中店)", url: "https://maps.app.goo.gl/nZMjQiwrRmfksgL97", rating: 4.1, price: [1, 200], distance: 100, photo: "https://lh5.googleusercontent.com/p/AF1QipOFW1ZCIjfV-q1OM-hM6Kz7QLQW1TXmeLJmtOIC=w408-h541-k-no" },
+    { name: "HUN混", url: "https://maps.app.goo.gl/9TzWFUoW9twxgyhe9", rating: 4.5, price: [200,400], distance: 45, photo: "https://example.com/photo1.jpg" },
+    { name: "神攻沙威瑪 台中一中店", url: "https://maps.app.goo.gl/zym5fXAwPtKwsT2r9", rating: 4.0, price: [1, 200], distance: 41, photo: "https://example.com/photo2.jpg" },
+    { name: "OT蛋餅一中大本營", url: "https://maps.app.goo.gl/p5FUWwgWMzHXTfF27", rating: 4.2, price: [1, 200], distance: 45, photo: "https://example.com/photo3.jpg" },
+    { name: "九州日式豚骨拉麵(一中店)", url: "https://maps.app.goo.gl/nZMjQiwrRmfksgL97", rating: 4.1, price: [1, 200], distance: 100, photo: "https://example.com/photo4.jpg" },
     { name: "宅 一中店", url: "https://maps.app.goo.gl/AQYtBcSvRwEBQ5cD8", rating: 4.5, price: [400, 600], distance: 100, photo: "https://lh5.googleusercontent.com/p/AF1QipNPtXY5n3cgY65_VMviciycFdZQHA-_gKH-Dpg5=w408-h272-k-no" },
 ];
 
@@ -30,7 +30,7 @@ function displayStores(storeList) {
             <div class="store-link">
                 <a href="${store.url}" target="_blank">
                     <button class="map-button">
-                        <img src="https://illustration-free.net/thumb/svg/ifn0952.svg" alt="地標圖案">
+                        <img src="https://illustration-free.net/thumb/svg/ifn0950.svg" alt="地標圖案">
                     </button>
                 </a>
             </div>
@@ -49,11 +49,11 @@ function searchStores() {
 
     // 根據篩選條件過濾店家
     const filteredStores = stores.filter(store => 
-        store.rating >= rating &&
+        (rating == 0 || store.rating >= rating) &&
         (Array.isArray(store.price) ?
             store.price[0] <= maxPrice && store.price[1] >= minPrice :
             store.price >= minPrice && store.price <= maxPrice) &&
-        store.distance <= distance
+        (distance == 0 || store.distance <= distance)
     );
 
     // 顯示過濾後的店家
