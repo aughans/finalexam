@@ -19,7 +19,7 @@ function displayStores(storeList) {
         storeElement.classList.add("store-item");
         storeElement.innerHTML = `
             <div class="store-photo">
-                <img src="${store.photo}" alt="${store.name}的照片">
+                <img src="${store.photo}" alt="${store.name}">
             </div>
             <div>
                 <h3>${store.name}</h3>
@@ -30,7 +30,7 @@ function displayStores(storeList) {
             <div class="store-link">
                 <a href="${store.url}" target="_blank">
                     <button class="map-button">
-                        <img src="https://illustration-free.net/thumb/svg/ifn0950.svg" alt="地標圖案">
+                        <img src="https://illustration-free.net/thumb/svg/ifn0949.svg" alt="地標圖案">
                     </button>
                 </a>
             </div>
@@ -45,7 +45,8 @@ function searchStores() {
     const rating = document.getElementById("rating").value;
     const priceRange = document.getElementById("priceRange").value;
     const [minPrice, maxPrice] = priceRange.split('-').map(Number);
-    const distance = document.getElementById("distance").value;
+    const distanceRange = document.getElementById("distance").value;
+    const [minDistance, maxDistance] = distanceRange.split('-').map(Number);
 
     // 根據篩選條件過濾店家
     const filteredStores = stores.filter(store => 
@@ -53,7 +54,7 @@ function searchStores() {
         (Array.isArray(store.price) ?
             store.price[0] <= maxPrice && store.price[1] >= minPrice :
             store.price >= minPrice && store.price <= maxPrice) &&
-        (distance == 0 || store.distance <= distance)
+        (distanceRange == 0 || (store.distance >= minDistance && store.distance <= maxDistance))
     );
 
     // 顯示過濾後的店家
