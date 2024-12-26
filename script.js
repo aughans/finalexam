@@ -30,7 +30,7 @@ function displayStores(storeList) {
             <div class="store-link">
                 <a href="${store.url}" target="_blank">
                     <button class="map-button">
-                        <img src="https://illustration-free.net/thumb/svg/ifn0952.svg" alt="地標圖案"> //地標連結放這
+                        <img src="https://illustration-free.net/thumb/svg/ifn0952.svg" alt="地標圖案">
                     </button>
                 </a>
             </div>
