@@ -1,7 +1,6 @@
 // 定義店家資料的陣列，每個店家包含名稱、網址、評分、價格範圍、距離和照片
 const stores = [
 { name: "HUN混", url: "https://maps.app.goo.gl/9TzWFUoW9twxgyhe9", rating: 4.5, price: [200,400], distance: 45, photo: "https://lh5.googleusercontent.com/p/AF1QipNY6s11mygsidwKb1Xv3CkY7qYjDpcc3ZvgZQrd=w426-h240-k-no" },
-{ name: "神攻沙威瑪 台中一中店", url: "https://maps.app.goo.gl/zym5fXAwPtKwsT2r9", rating: 4.0, price: [1, 200], distance: 41, photo: "https://lh5.googleusercontent.com/p/AF1QipOZyYhBoCSJiIXLvfv-zXrsXeBcFRvZlmKB4VYa=w408-h544-k-no" },
 { name: "OT蛋餅一中大本營", url: "https://maps.app.goo.gl/p5FUWwgWMzHXTfF27", rating: 4.2, price: [1, 200], distance: 45, photo: "https://lh5.googleusercontent.com/p/AF1QipMBeawQ_vTeTQ1UQ0Sq1WS9i0DQjri9CfUZUuPP=w408-h306-k-no" },
 { name: "九州日式豚骨拉麵(一中店)", url: "https://maps.app.goo.gl/nZMjQiwrRmfksgL97", rating: 4.1, price: [1, 200], distance: 100, photo: "https://lh5.googleusercontent.com/p/AF1QipOFW1ZCIjfV-q1OM-hM6Kz7QLQW1TXmeLJmtOIC=w408-h541-k-no" },
 { name: "宅 一中店", url: "https://maps.app.goo.gl/AQYtBcSvRwEBQ5cD8", rating: 4.5, price: [400, 600], distance: 100, photo: "https://lh5.googleusercontent.com/p/AF1QipNPtXY5n3cgY65_VMviciycFdZQHA-_gKH-Dpg5=w408-h272-k-no" },
@@ -19,7 +18,7 @@ const stores = [
 { name: "聚一波 GEP 義式料理", url: "https://maps.app.goo.gl/2Dx7rPsHSj38ZRbj6", rating:4.6, price: [200, 400], distance:230, photo: "https://lh5.googleusercontent.com/p/AF1QipPscTGF4uBCJzvOsHhLo-EAO-n9IsX1z0g19qA=w408-h271-k-no" },
 { name: "黑GURO屋台食堂", url: "https://maps.app.goo.gl/SrGSsCY9E5PLuuK38", rating:4.8, price: [200, 400], distance:270, photo: "https://lh5.googleusercontent.com/p/AF1QipMq4B8QPgeOgTS8QoNq62mVPvO7ex1Iqu_bKZIb=w408-h544-k-no" },
 { name: "Pizza running 新一中店", url: "https://maps.app.goo.gl/Npbo2sMawViW4dSi9", rating:4.0, price: [1, 200], distance:110, photo: "https://lh5.googleusercontent.com/p/AF1QipNd9xKON5npbV67F1hmJDPP15l7I7TWVk3qCS3L=w408-h544-k-no" },
-{ name: "8德司創意餐館(一中店)", url: "https://maps.app.goo.gl/hc7uESNyQYFXzSkj8", rating:4.7, price: [400, 600], distance:170, photo: "https://lh5.googleusercontent.com/p/AF1QipOSBSEPl1QmsV38d9cCqiL1iOUf-_lYqG-K3d4c=w408-h306-k-no" },
+{ name: "8德司創意餐館(一中店)", url: "https://maps.app.goo.gl/hc7uESNyQYFXzSkj8", rating:4.7, price: [400, 600], distance:170, photo: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH69yoJyC27q7FLOdvKZkD5U1-vi3XG5Z5ne_uddpPKmIIUAbzCPEM3vPd5ZjvROF6dbv8TFJLbpGXEQScTFbx3Xp-1XyynnP1VYq9Ju9j7tCBKKqFavZOrLjDY0CuNleIBCyM9=w408-h544-k-no" },
 { name: "八色烤肉 台中四號店", url: "https://maps.app.goo.gl/RMvZquwA8PAEkLyS7", rating:4.0, price: [600, 800], distance:220, photo: "https://lh5.googleusercontent.com/p/AF1QipNrEug3h1olxTWOIqrX61JzT-pvnnZanW-BCAQr=w408-h544-k-no" },
 { name: "小象餐廳", url: "https://maps.app.goo.gl/Tv4KzDGUfK1wqdNe8", rating:3.8, price: [1, 200], distance:270, photo: "https://lh5.googleusercontent.com/p/AF1QipP371rPtKMSz4Ln7f9dlY2-A5NrwobQppXbaqCy=w408-h725-k-no" },
 { name: "高牧手作料理餐廳", url: "https://maps.app.goo.gl/dFFRputSHpkegHfq9", rating:4.3, price: [200, 400], distance:290, photo: "https://lh5.googleusercontent.com/p/AF1QipOMugc952l9sNDjRTxb_saVOk6YMB9PYkIQHcQ1=w408-h340-k-no" },
